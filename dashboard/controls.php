@@ -1,0 +1,340 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) exit;
+add_settings_field(
+  'ssnfy-check-products-taxo-widget',
+  '',
+  'ssnfy_plugin_function_for_datas_callback',
+  'ssnfy-plugin-main-menu',
+  'ssnfy-plugin-switch-section'
+);
+add_settings_field(
+  'ssnfy-estimass-presets',
+  '',
+  'ssnfy_plugin_function_for_datas_callback',
+  'ssnfy-plugin-main-menu',
+  'ssnfy-plugin-switch-section'
+);
+add_settings_field(
+  'wpesd-top-title-check',
+  '',
+  'ssnfy_plugin_function_for_datas_callback',
+  'ssnfy-plugin-main-menu',
+  'ssnfy-plugin-switch-section'
+);
+add_settings_field(
+  'wpesd-expand-title-check',
+  '',
+  'ssnfy_plugin_function_for_datas_callback',
+  'ssnfy-plugin-main-menu',
+  'ssnfy-plugin-switch-section'
+);
+add_settings_field(
+  'ssnfy-shipimg-check',
+  '',
+  'ssnfy_plugin_function_for_datas_callback',
+  'ssnfy-plugin-main-menu',
+  'ssnfy-plugin-switch-section'
+);
+// Taxos label check
+add_settings_field(
+  'ssnfy-checkout-page-check',
+  '',
+  'ssnfy_plugin_function_for_datas_callback',
+  'ssnfy-plugin-main-menu',
+  'ssnfy-plugin-switch-section'
+);
+// controls
+// *** top title
+add_settings_field(
+  'ssnfy-estimass-toptitle-color',
+  '',
+  'ssnfy_plugin_function_for_datas_callback',
+  'ssnfy-plugin-main-menu',
+  'ssnfy-plugin-switch-section'
+);
+add_settings_field(
+  'ssnfy-estimass-toptitle-bgcolor',
+  '',
+  'ssnfy_plugin_function_for_datas_callback',
+  'ssnfy-plugin-main-menu',
+  'ssnfy-plugin-switch-section'
+);
+add_settings_field(
+  'ssnfy-estimass-toptitle-fontsize',
+  '',
+  'ssnfy_plugin_function_for_datas_callback',
+  'ssnfy-plugin-main-menu',
+  'ssnfy-plugin-switch-section'
+);
+add_settings_field(
+  'ssnfy-estimass-toptitle-fontweight',
+  '',
+  'ssnfy_plugin_function_for_datas_callback',
+  'ssnfy-plugin-main-menu',
+  'ssnfy-plugin-switch-section'
+);
+add_settings_field(
+  'ssnfy-estimass-toptitle-fontfamilly',
+  '',
+  'ssnfy_plugin_function_for_datas_callback',
+  'ssnfy-plugin-main-menu',
+  'ssnfy-plugin-switch-section'
+);
+// *** estimass
+add_settings_field(
+  'ssnfy-estimass-color',
+  '',
+  'ssnfy_plugin_function_for_datas_callback',
+  'ssnfy-plugin-main-menu',
+  'ssnfy-plugin-switch-section'
+);
+add_settings_field(
+  'ssnfy-estimass-fontsize',
+  '',
+  'ssnfy_plugin_function_for_datas_callback',
+  'ssnfy-plugin-main-menu',
+  'ssnfy-plugin-switch-section'
+);
+add_settings_field(
+  'ssnfy-estimass-fontweight',
+  '',
+  'ssnfy_plugin_function_for_datas_callback',
+  'ssnfy-plugin-main-menu',
+  'ssnfy-plugin-switch-section'
+);
+add_settings_field(
+  'ssnfy-estimass-fontfamilly',
+  '',
+  'ssnfy_plugin_function_for_datas_callback',
+  'ssnfy-plugin-main-menu',
+  'ssnfy-plugin-switch-section'
+);
+// headline bg
+add_settings_field(
+  'ssnfy-estimass-bgcolor5',
+  '',
+  'ssnfy_plugin_function_for_datas_callback',
+  'ssnfy-plugin-main-menu',
+  'ssnfy-plugin-switch-section'
+);
+add_settings_field(
+  'ssnfy-reason-box-shadow5',
+  '',
+  'ssnfy_plugin_function_for_datas_callback',
+  'ssnfy-plugin-main-menu',
+  'ssnfy-plugin-switch-section'
+);
+add_settings_field(
+  'ssnfy-reason-border-radius5',
+  '',
+  'ssnfy_plugin_function_for_datas_callback',
+  'ssnfy-plugin-main-menu',
+  'ssnfy-plugin-switch-section'
+);
+// expand bg
+add_settings_field(
+  'ssnfy-estimass-bgcolorEX',
+  '',
+  'ssnfy_plugin_function_for_datas_callback',
+  'ssnfy-plugin-main-menu',
+  'ssnfy-plugin-switch-section'
+);
+add_settings_field(
+  'ssnfy-reason-box-shadowEX',
+  '',
+  'ssnfy_plugin_function_for_datas_callback',
+  'ssnfy-plugin-main-menu',
+  'ssnfy-plugin-switch-section'
+);
+add_settings_field(
+  'ssnfy-reason-border-radiusEX',
+  '',
+  'ssnfy_plugin_function_for_datas_callback',
+  'ssnfy-plugin-main-menu',
+  'ssnfy-plugin-switch-section'
+);
+
+add_settings_field(
+  'ssnfy-estimdate-color',
+  '',
+  'ssnfy_plugin_function_for_datas_callback',
+  'ssnfy-plugin-main-menu',
+  'ssnfy-plugin-switch-section'
+);
+add_settings_field(
+  'ssnfy-reason-color',
+  '',
+  'ssnfy_plugin_function_for_datas_callback',
+  'ssnfy-plugin-main-menu',
+  'ssnfy-plugin-switch-section'
+);
+add_settings_field(
+  'ssnfy-reason-fontsize',
+  '',
+  'ssnfy_plugin_function_for_datas_callback',
+  'ssnfy-plugin-main-menu',
+  'ssnfy-plugin-switch-section'
+);
+add_settings_field(
+  'ssnfy-reason-fontweight',
+  '',
+  'ssnfy_plugin_function_for_datas_callback',
+  'ssnfy-plugin-main-menu',
+  'ssnfy-plugin-switch-section'
+);
+add_settings_field(
+  'ssnfy-reason-fontfamilly',
+  '',
+  'ssnfy_plugin_function_for_datas_callback',
+  'ssnfy-plugin-main-menu',
+  'ssnfy-plugin-switch-section'
+);
+// *** dimensions
+add_settings_field(
+  'ssnfy-estimdate-fontsize',
+  '',
+  'ssnfy_plugin_function_for_datas_callback',
+  'ssnfy-plugin-main-menu',
+  'ssnfy-plugin-switch-section'
+);
+add_settings_field(
+  'ssnfy-estimdate-fontweight',
+  '',
+  'ssnfy_plugin_function_for_datas_callback',
+  'ssnfy-plugin-main-menu',
+  'ssnfy-plugin-switch-section'
+);
+add_settings_field(
+  'ssnfy-estimdate-fontfamilly',
+  '',
+  'ssnfy_plugin_function_for_datas_callback',
+  'ssnfy-plugin-main-menu',
+  'ssnfy-plugin-switch-section'
+);
+
+// Register Settings all
+register_setting(
+  'ssnfy-plugin-settings', 
+  'ssnfy-check-products-taxo-widget' 
+);
+register_setting(
+  'ssnfy-plugin-settings', 
+  'ssnfy-estimass-presets' 
+);
+register_setting(
+  'ssnfy-plugin-settings', 
+  'wpesd-top-title-check' 
+);
+register_setting(
+  'ssnfy-plugin-settings', 
+  'wpesd-expand-title-check' 
+);
+register_setting(
+  'ssnfy-plugin-settings', 
+  'ssnfy-shipimg-check' 
+);
+// Taxos label check
+register_setting(
+  'ssnfy-plugin-settings', 
+  'ssnfy-checkout-page-check' 
+);
+// controls
+// *** top title
+register_setting(
+  'ssnfy-plugin-settings',
+  'ssnfy-estimass-toptitle-color'
+);
+register_setting(
+  'ssnfy-plugin-settings',
+  'ssnfy-estimass-toptitle-bgcolor'
+);
+register_setting(
+  'ssnfy-plugin-settings',
+  'ssnfy-estimass-toptitle-fontsize'
+);
+register_setting(
+  'ssnfy-plugin-settings',
+  'ssnfy-estimass-toptitle-fontweight'
+);
+register_setting(
+  'ssnfy-plugin-settings',
+  'ssnfy-estimass-toptitle-fontfamilly'
+);
+// *** estimass
+register_setting(
+  'ssnfy-plugin-settings',
+  'ssnfy-estimass-color'
+);
+register_setting(
+  'ssnfy-plugin-settings',
+  'ssnfy-estimass-fontsize'
+);
+register_setting(
+  'ssnfy-plugin-settings',
+  'ssnfy-estimass-fontweight'
+);
+register_setting(
+  'ssnfy-plugin-settings',
+  'ssnfy-estimass-fontfamilly'
+);
+// headline bg
+register_setting(
+  'ssnfy-plugin-settings',
+  'ssnfy-estimass-bgcolor5'
+);
+register_setting(
+  'ssnfy-plugin-settings',
+  'ssnfy-reason-box-shadow5'
+);
+register_setting(
+  'ssnfy-plugin-settings',
+  'ssnfy-reason-border-radius5'
+);
+// expand bg
+register_setting(
+  'ssnfy-plugin-settings',
+  'ssnfy-estimass-bgcolorEX'
+);
+register_setting(
+  'ssnfy-plugin-settings',
+  'ssnfy-reason-box-shadowEX'
+);
+register_setting(
+  'ssnfy-plugin-settings',
+  'ssnfy-reason-border-radiusEX'
+);
+// *** estimdate
+register_setting(
+  'ssnfy-plugin-settings',
+  'ssnfy-estimdate-color'
+);
+// *** reason
+register_setting(
+  'ssnfy-plugin-settings',
+  'ssnfy-reason-color'
+);
+register_setting(
+  'ssnfy-plugin-settings',
+  'ssnfy-reason-fontsize'
+);
+register_setting(
+  'ssnfy-plugin-settings',
+  'ssnfy-reason-fontweight'
+);
+register_setting(
+  'ssnfy-plugin-settings',
+  'ssnfy-reason-fontfamilly'
+);
+// *** estimdate
+register_setting(
+  'ssnfy-plugin-settings',
+  'ssnfy-estimdate-fontsize'
+);
+register_setting(
+  'ssnfy-plugin-settings',
+  'ssnfy-estimdate-fontweight'
+);
+register_setting(
+  'ssnfy-plugin-settings',
+  'ssnfy-estimdate-fontfamilly'
+);
