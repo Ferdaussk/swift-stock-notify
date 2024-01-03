@@ -15,14 +15,7 @@ add_settings_field(
   'ssnfy-plugin-switch-section'
 );
 add_settings_field(
-  'wpesd-top-title-check',
-  '',
-  'ssnfy_plugin_function_for_datas_callback',
-  'ssnfy-plugin-main-menu',
-  'ssnfy-plugin-switch-section'
-);
-add_settings_field(
-  'wpesd-expand-title-check',
+  'ssnfy-top-title-check',
   '',
   'ssnfy_plugin_function_for_datas_callback',
   'ssnfy-plugin-main-menu',
@@ -223,11 +216,7 @@ register_setting(
 );
 register_setting(
   'ssnfy-plugin-settings', 
-  'wpesd-top-title-check' 
-);
-register_setting(
-  'ssnfy-plugin-settings', 
-  'wpesd-expand-title-check' 
+  'ssnfy-top-title-check' 
 );
 register_setting(
   'ssnfy-plugin-settings', 

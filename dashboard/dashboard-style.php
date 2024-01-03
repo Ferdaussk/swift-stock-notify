@@ -1,7 +1,7 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) exit;
 // Taxos label check
-$ssnfy_checkout_page_check = get_option( 'ssnfy-checkout-page-check', 'before_add_to_cart_button' );
+$ssnfy_checkout_page_check = get_option( 'ssnfy-checkout-page-check', 'after_add_to_cart_button' );
 // Label controls
 // *** top title
 $ssnfy_estimass_toptitle_color_value = get_option( 'ssnfy-estimass-toptitle-color');
@@ -23,9 +23,8 @@ $ssnfy_estimass_bgcolorEX_value = get_option( 'ssnfy-estimass-bgcolorEX' );
 $ssnfy_estimass_box_shadowEX_value = get_option( 'ssnfy-reason-box-shadowEX' );
 $ssnfy_estimass_radiusEX_value = get_option( 'ssnfy-reason-border-radiusEX' );
 // *** estimdate
-$ssnfy_estimass_presets_value = get_option( 'ssnfy-estimass-presets', 2 );
-$wpesd_top_title_check_check = get_option( 'wpesd-top-title-check');
-$wpesd_expand_title_check_check = get_option( 'wpesd-expand-title-check', 'on' );
+$ssnfy_estimass_presets_value = get_option( 'ssnfy-estimass-presets', 'reciver@mail.com' );
+$ssnfy_top_title_check_check = get_option( 'ssnfy-top-title-check','Stock Request');
 // *** reason
 $ssnfy_reason_color_value = get_option( 'ssnfy-reason-color' );
 $ssnfy_reason_fontsize_value = get_option( 'ssnfy-reason-fontsize');
@@ -59,40 +58,6 @@ $all_fonts = [
 	'Playfair Display, serif' => esc_html__('Playfair Display', 'swift-stock-notify'),
 	'Quicksand, sans-serif' => esc_html__('Quicksand', 'swift-stock-notify'),
 ];
-// Presets
-$ss_all_presets = [
-  '2' => esc_html__('Style1', 'swift-stock-notify'),
-  '1' => esc_html__('Style2', 'swift-stock-notify'),
-  '3' => esc_html__('Style3', 'swift-stock-notify'),
-  '4' => esc_html__('Style4', 'swift-stock-notify'),
-  '5' => esc_html__('Style5', 'swift-stock-notify'),
-  '6' => esc_html__('Style6', 'swift-stock-notify'),
-  '15' => esc_html__('Style7', 'swift-stock-notify'),
-  '16' => esc_html__('Style8', 'swift-stock-notify'),
-  '17' => esc_html__('Style9', 'swift-stock-notify'),
-  '18' => esc_html__('Style10', 'swift-stock-notify'),
-  '19' => esc_html__('Style11', 'swift-stock-notify'),
-  '20' => esc_html__('Style12', 'swift-stock-notify'),
-  '21' => esc_html__('Style13', 'swift-stock-notify'),
-  '22' => esc_html__('Style14', 'swift-stock-notify'),
-  '23' => esc_html__('Style15', 'swift-stock-notify'),
-  '24' => esc_html__('Style16', 'swift-stock-notify'),
-  '25' => esc_html__('Style17', 'swift-stock-notify'),
-  '26' => esc_html__('Style18', 'swift-stock-notify'),
-  '27' => esc_html__('Style19', 'swift-stock-notify'),
-  '28' => esc_html__('Style20', 'swift-stock-notify'),
-  '29' => esc_html__('Style21', 'swift-stock-notify'),
-  '30' => esc_html__('Style22', 'swift-stock-notify'),
-  '31' => esc_html__('Style23', 'swift-stock-notify'),
-  '7' => esc_html__('Style24', 'swift-stock-notify'),
-  '8' => esc_html__('Style25', 'swift-stock-notify'),
-  '9' => esc_html__('Style26', 'swift-stock-notify'),
-  '10' => esc_html__('Style27', 'swift-stock-notify'),
-  '11' => esc_html__('Style28', 'swift-stock-notify'),
-  '12' => esc_html__('Style29', 'swift-stock-notify'),
-  '13' => esc_html__('Style30', 'swift-stock-notify'),
-  '14' => esc_html__('Style31', 'swift-stock-notify'),
-];
 ?>
 <div class="admin-panel">
   <form method="post" action="options.php">
@@ -111,22 +76,12 @@ $ss_all_presets = [
     <div class="section">
       <div class="clmn-wrap first-clm">
         <div class="select-container">
-          <label for=""><?php echo esc_html__('Presets Style', 'swift-stock-notify');?></label>
-          <?php
-          echo '<select id="ssnfy-estimass-presets" name="ssnfy-estimass-presets">';
-            foreach($ss_all_presets as $style_slug => $style_title){
-              echo '<option value="'.esc_attr($style_slug).'" '.selected(esc_attr($ssnfy_estimass_presets_value),esc_attr($style_slug)).'>'.esc_html__($style_title,'swift-stock-notify').'</option>';
-            }
-          echo '</select>';
-          ?>
+          <label for=""><?php echo esc_html__('Reciver mail', 'swift-stock-notify');?></label>
+          <?php echo '<input type="text" name="ssnfy-estimass-presets" id="ssnfy-estimass-presets" value="'.$ssnfy_estimass_presets_value.'" title="Text"  placeholder="Reciver mail here" required>';?>
         </div>
-        <div class="list-container wpesd_cmmn_chacthak">
+        <div class="list-container ssnfy_cmmn_chacthak">
           <label class="qape_title"><?php echo esc_html__('Request btn', 'wproduct-estimated-shipping-date'); ?></label>
-          <?php echo '<input type="text" name="wpesd-top-title-check" id="wpesd-top-title-check" value="'.$wpesd_top_title_check_check.'" title="Text"  placeholder="Swift Stock Notify">';?>
-        </div>
-        <div class="list-container wpesd_cmmn_chacthak">
-          <input type="checkbox" name="wpesd-expand-title-check" value="on" <?php echo checked( $wpesd_expand_title_check_check, 'on', false ); ?>>
-          <label class="checker-switch"><?php echo esc_html__('Show expand title', 'wproduct-estimated-shipping-date'); ?></label>
+          <?php echo '<input type="text" name="ssnfy-top-title-check" id="ssnfy-top-title-check" value="'.$ssnfy_top_title_check_check.'" title="Text"  placeholder="Swift Stock Notify">';?>
         </div>
         <div class="choose-page"><?php echo esc_html__('Single page position:', 'swift-stock-notify'); ?></div>
         <div class="list-container">
@@ -138,12 +93,12 @@ $ss_all_presets = [
           <div class="list-item">
             <input type="radio" name="ssnfy-checkout-page-check" value="before_add_to_cart_button"
             <?php checked(get_option('ssnfy-checkout-page-check', 'off'), 'before_add_to_cart_button'); ?>>
-            <label ><?php echo esc_html__('Before add to cart button', 'swift-stock-notify'); ?></label>
+            <label ><?php echo esc_html__('WooCommerce Share', 'swift-stock-notify'); ?></label>
           </div>
           <div class="list-item">
             <input type="radio" name="ssnfy-checkout-page-check" value="after_add_to_cart_button"
             <?php checked(get_option('ssnfy-checkout-page-check', 'off'), 'after_add_to_cart_button'); ?>>
-            <label ><?php echo esc_html__('After add to cart button', 'swift-stock-notify'); ?></label>
+            <label ><?php echo esc_html__('Product Meta Start', 'swift-stock-notify'); ?></label>
           </div>
           <div class="list-item">
             <input type="radio" name="ssnfy-checkout-page-check" value="after_single_product"

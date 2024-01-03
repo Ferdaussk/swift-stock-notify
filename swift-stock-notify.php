@@ -30,7 +30,7 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 require_once ( plugin_dir_path(__FILE__) ) . '/inc/requires-check.php';
-final class FinalQAFFWShop{
+final class FinalSSNFYShop{
 	const VERSION = '1.0';
 	const MINIMUM_PHP_VERSION = '7.0';
 	public function __construct() {
@@ -77,5 +77,5 @@ final class FinalQAFFWShop{
 	}
 }
 
-new FinalQAFFWShop();
+new FinalSSNFYShop();
 remove_action( 'shutdown', 'wp_ob_end_flush_all', 1 );

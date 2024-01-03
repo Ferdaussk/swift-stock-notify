@@ -49,6 +49,7 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
   z-index: 9998;
+  max-width: none;
 }
 
 #ssnfyPopup {
@@ -87,27 +88,25 @@
   margin-bottom: 10px;
 }
 
-.custom-stock-notification-form label {
+.ssnfy-msg-l, .ssnfy-email-l {
   display: block;
   margin-bottom: 5px;
 }
 
-.custom-stock-notification-form input[type="email"] {
-  width: 100%;
+input.ssnfy-email-input {
   padding: 8px;
   margin-bottom: 10px;
   border: 1px solid;
   border-radius: 4px;
 }
-.custom-stock-notification-form input[type="text"] {
-  width: 100%;
+input.ssnfy-msg-input {
   padding: 8px;
   margin-bottom: 10px;
   border: 1px solid;
   border-radius: 4px;
 }
 
-.custom-stock-notification-form input[type="submit"] {
+.ssnfy-submit {
   background-color: #4caf50; /* Green submit button */
   color: #fff;
   padding: 10px;
@@ -160,7 +159,7 @@
   font-size: 16px;
 }
 
-.custom-stock-notification-form input[type="submit"] {
+.ssnfy-submit {
   background-color: #4caf50;
   color: #fff;
   cursor: pointer;
@@ -170,7 +169,7 @@
   font-size: 16px;
 }
 
-.custom-stock-notification-form input[type="submit"]:hover {
+.ssnfy-submit:hover {
   background-color: #45a049;
 }
 

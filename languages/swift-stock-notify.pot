@@ -1,0 +1,285 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: Swift Stock Notify\n"
+"POT-Creation-Date: 2023-12-28 11:45+0600\n"
+"PO-Revision-Date: 2023-12-28 11:45+0600\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: swift-stock-notify.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: dashboard/dashboard-style.php:40
+msgid "Default"
+msgstr ""
+
+#: dashboard/dashboard-style.php:41
+msgid "Arial"
+msgstr ""
+
+#: dashboard/dashboard-style.php:42
+msgid "Helvetica"
+msgstr ""
+
+#: dashboard/dashboard-style.php:43
+msgid "Georgia"
+msgstr ""
+
+#: dashboard/dashboard-style.php:44
+msgid "Fantasy"
+msgstr ""
+
+#: dashboard/dashboard-style.php:45
+msgid "Tahoma"
+msgstr ""
+
+#: dashboard/dashboard-style.php:46
+msgid "Courier New"
+msgstr ""
+
+#: dashboard/dashboard-style.php:47
+msgid "Palatino"
+msgstr ""
+
+#: dashboard/dashboard-style.php:48
+msgid "Garamond"
+msgstr ""
+
+#: dashboard/dashboard-style.php:49
+msgid "Century Gothic"
+msgstr ""
+
+#: dashboard/dashboard-style.php:50
+msgid "Futura"
+msgstr ""
+
+#: dashboard/dashboard-style.php:51
+msgid "Roboto"
+msgstr ""
+
+#: dashboard/dashboard-style.php:52
+msgid "Open Sans"
+msgstr ""
+
+#: dashboard/dashboard-style.php:53
+msgid "Lato"
+msgstr ""
+
+#: dashboard/dashboard-style.php:54
+msgid "Montserrat"
+msgstr ""
+
+#: dashboard/dashboard-style.php:55
+msgid "Raleway"
+msgstr ""
+
+#: dashboard/dashboard-style.php:56
+msgid "Poppins"
+msgstr ""
+
+#: dashboard/dashboard-style.php:57
+msgid "Nunito"
+msgstr ""
+
+#: dashboard/dashboard-style.php:58
+msgid "Playfair Display"
+msgstr ""
+
+#: dashboard/dashboard-style.php:59
+msgid "Quicksand"
+msgstr ""
+
+#: dashboard/dashboard-style.php:68
+msgid "BEST WP DEVELOPER"
+msgstr ""
+
+#: dashboard/dashboard-style.php:79
+msgid "Reciver mail"
+msgstr ""
+
+#: dashboard/dashboard-style.php:83 dashboard/dashboard-style.php:117
+msgid "Request btn"
+msgstr ""
+
+#: dashboard/dashboard-style.php:86
+msgid "Single page position:"
+msgstr ""
+
+#: dashboard/dashboard-style.php:91
+msgid "Before single product summary"
+msgstr ""
+
+#: dashboard/dashboard-style.php:96
+msgid "Before add to cart button"
+msgstr ""
+
+#: dashboard/dashboard-style.php:101
+msgid "After add to cart button"
+msgstr ""
+
+#: dashboard/dashboard-style.php:106
+msgid "After single product"
+msgstr ""
+
+#: dashboard/dashboard-style.php:111
+msgid "After single product summary"
+msgstr ""
+
+#: dashboard/dashboard-style.php:119 dashboard/dashboard-style.php:240
+msgid "BG"
+msgstr ""
+
+#: dashboard/dashboard-style.php:123 dashboard/dashboard-style.php:244
+msgid "Box Shadow"
+msgstr ""
+
+#: dashboard/dashboard-style.php:127 dashboard/dashboard-style.php:248
+msgid "Border Radius"
+msgstr ""
+
+#: dashboard/dashboard-style.php:131
+msgid "Submit btn"
+msgstr ""
+
+#: dashboard/dashboard-style.php:133 dashboard/dashboard-style.php:164
+#: dashboard/dashboard-style.php:190 dashboard/dashboard-style.php:215
+msgid "Color"
+msgstr ""
+
+#: dashboard/dashboard-style.php:137
+msgid "BG Color"
+msgstr ""
+
+#: dashboard/dashboard-style.php:141 dashboard/dashboard-style.php:168
+#: dashboard/dashboard-style.php:194 dashboard/dashboard-style.php:219
+msgid "Font size"
+msgstr ""
+
+#: dashboard/dashboard-style.php:145 dashboard/dashboard-style.php:172
+#: dashboard/dashboard-style.php:198 dashboard/dashboard-style.php:223
+msgid "Font weight"
+msgstr ""
+
+#: dashboard/dashboard-style.php:149 dashboard/dashboard-style.php:176
+#: dashboard/dashboard-style.php:202 dashboard/dashboard-style.php:227
+msgid "Font family"
+msgstr ""
+
+#: dashboard/dashboard-style.php:162
+msgid "Stock Notice"
+msgstr ""
+
+#: dashboard/dashboard-style.php:188
+msgid "Email label"
+msgstr ""
+
+#: dashboard/dashboard-style.php:213
+msgid "Message label"
+msgstr ""
+
+#: dashboard/dashboard-style.php:238
+msgid "Popup wrap"
+msgstr ""
+
+#: inc/complex.php:13
+msgid "This product is currently out of stock."
+msgstr ""
+
+#: inc/complex.php:17
+msgid ""
+"Enter your email to receive a notification when the product is back in stock:"
+msgstr ""
+
+#: inc/complex.php:19
+msgid "Your Message (Optional):"
+msgstr ""
+
+#: inc/complex.php:32
+msgid "Notification submitted successfully!"
+msgstr ""
+
+#: inc/complex.php:35
+msgid "Stock Notification"
+msgstr ""
+
+#: inc/complex.php:44
+msgid "Invalid email address. Please try again."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+#: inc/prod-ready.php:39 inc/prod-ready.php:40 inc/requires-check.php:18
+#: inc/requires-check.php:25 swift-stock-notify.php:71
+msgid "Swift Stock Notify"
+msgstr ""
+
+#: inc/prod-ready.php:164
+msgid "Settings"
+msgstr ""
+
+#: inc/prod-ready.php:201
+msgid "Stock Request Check"
+msgstr ""
+
+#: inc/prod-ready.php:202
+msgid "Check here to show stock request form for the product."
+msgstr ""
+
+#: inc/requires-check.php:18
+msgid "requires WooCommerce to be activated."
+msgstr ""
+
+#: inc/requires-check.php:19
+msgid "Activate WooCommerce"
+msgstr ""
+
+#: inc/requires-check.php:25
+msgid "requires WooCommerce to be installed and activated."
+msgstr ""
+
+#: inc/requires-check.php:26
+msgid "Install WooCommerce"
+msgstr ""
+
+#: swift-stock-notify.php:70
+#, php-format
+msgid "\"%1$s\" requires \"%2$s\" version %3$s or greater."
+msgstr ""
+
+#: swift-stock-notify.php:72
+msgid "PHP"
+msgstr ""
+
+#: swift-stock-notify.php:76
+#, php-format
+msgid "%1$s"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://bestwpdeveloper.com/swift-stock-notify/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Smart Restock Alerts! Drive customer engagement by enabling swift "
+"notifications. Elevate your WooCommerce experience with Swift Stock Notifier."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Best WP Developer"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://bestwpdeveloper.com"
+msgstr ""

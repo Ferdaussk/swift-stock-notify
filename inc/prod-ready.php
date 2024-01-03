@@ -1,10 +1,10 @@
 <?php
-namespace ProdQAFFW;
+namespace ProdSSNFY;
 if ( ! defined( 'ABSPATH' ) ) exit;
-use ProdQAFFW\PageSettings\Page_Settings;
-define( "QAFFW_ASFSK_ASSETS_PUBLIC_DIR_FILE", plugin_dir_url( __FILE__ ) . "../assets/public" );
-define( "QAFFW_ASFSK_ASSETS_ADMIN_DIR_FILE", plugin_dir_url( __FILE__ ) . "../assets/admin" );
-class ClassProdQAFFW {
+use ProdSSNFY\PageSettings\Page_Settings;
+define( "SSNFY_ASFSK_ASSETS_PUBLIC_DIR_FILE", plugin_dir_url( __FILE__ ) . "../assets/public" );
+define( "SSNFY_ASFSK_ASSETS_ADMIN_DIR_FILE", plugin_dir_url( __FILE__ ) . "../assets/admin" );
+class ClassProdSSNFY {
 	private static $_instance = null;
 	public static function instance() {
 		if ( is_null( self::$_instance ) ) {
@@ -19,8 +19,8 @@ class ClassProdQAFFW {
 		if (isset($_GET['page']) && $_GET['page'] === 'get-swift-stock-notify') {
             wp_enqueue_script( 'ssnfy-wheelcolorpicker', plugin_dir_url( __FILE__ ) . '../assets/admin/colorpicker/jquery.wheelcolorpicker.js', array('jquery'), '1.0', true );
             $all_css_js_file = array(
-                'ssnfy-style' => array('ssnfy_path_define'=>QAFFW_ASFSK_ASSETS_ADMIN_DIR_FILE . '/style.css'),
-                'ssnfy-wheelcolorpicker' => array('ssnfy_path_define'=>QAFFW_ASFSK_ASSETS_ADMIN_DIR_FILE . '/colorpicker/wheelcolorpicker.css'),
+                'ssnfy-style' => array('ssnfy_path_define'=>SSNFY_ASFSK_ASSETS_ADMIN_DIR_FILE . '/style.css'),
+                'ssnfy-wheelcolorpicker' => array('ssnfy_path_define'=>SSNFY_ASFSK_ASSETS_ADMIN_DIR_FILE . '/colorpicker/wheelcolorpicker.css'),
             );
             foreach($all_css_js_file as $handle => $fileinfo){
                 wp_enqueue_style( $handle, $fileinfo['ssnfy_path_define'], null, '1.0', 'all');
@@ -41,7 +41,7 @@ class ClassProdQAFFW {
 				'manage_options',
 				'get-swift-stock-notify',
 				array($this, 'ssnfy_plugin_submenu_about_plugin_page'),
-				'dashicons-schedule',
+				'dashicons-buddicons-pm',
 				56
 			);
 		}
@@ -167,11 +167,11 @@ class ClassProdQAFFW {
         return $links;
     }
 
-    public function ssnfy_add_to_cart_button(){
+    public function ssnfy_wooc_share(){
         echo ssnfy_sk_single();
     }
 
-    public function ssnfy_after_add_to_cart_button(){
+    public function ssnfy_product_meta_start(){
         echo ssnfy_sk_single();
     }
 
@@ -187,26 +187,24 @@ class ClassProdQAFFW {
         echo ssnfy_sk_single();
     }
 
-    public function ssnfy_custom_tab_content(){
-        echo ssnfy_sk_single();
-    }
-
     public function ssnfy_add_custom_postbox() {
         global $post;
-    
+        $custom_checkbox_inventory = get_post_meta($post->ID, 'stock_req_check', true);
+        $checked = empty($custom_checkbox_inventory) || $custom_checkbox_inventory === 'yes' ? 'yes' : 'no';
         woocommerce_wp_checkbox(
             array(
-                'id'            => '_custom_checkbox_inventory',
-                'label'         => __('Custom Checkbox for Inventory', 'wproduct-estimated-shipping-date'),
-                'description'   => __('Description for the custom checkbox in Inventory tab.'),
+                'id'            => 'stock_req_check',
+                'label'         => __('Stock Request Check', 'wproduct-estimated-shipping-date'),
+                'description'   => __('Check here to show stock request form for the product.'),
                 'desc_tip'      => true,
+                'value'         => $checked ,
             )
         );
     }
     
     public function ssnfy_save_custom_postbox_data($product_id) {
-        $checkbox_value = isset($_POST['_custom_checkbox_inventory']) ? 'yes' : 'no';
-        update_post_meta($product_id, '_custom_checkbox_inventory', $checkbox_value);
+        $checkbox_value = isset($_POST['stock_req_check']) && $_POST['stock_req_check'] === 'yes' ? 'yes' : 'no';
+        update_post_meta($product_id, 'stock_req_check', $checkbox_value);
     }
 
 	public function __construct() {
@@ -214,9 +212,9 @@ class ClassProdQAFFW {
         add_action('woocommerce_product_options_inventory_product_data', [$this, 'ssnfy_add_custom_postbox']);
         // Last Date 
         if(get_option( 'ssnfy-checkout-page-check', 'before_add_to_cart_button' )=='before_add_to_cart_button'){
-            add_action('woocommerce_before_add_to_cart_button', [$this, 'ssnfy_add_to_cart_button']); // For add_to_cart_button
+            add_action('woocommerce_share', [$this, 'ssnfy_wooc_share']); // For woocommerce_share
         }elseif(get_option( 'ssnfy-checkout-page-check' )=='after_add_to_cart_button'){
-            add_action('woocommerce_after_add_to_cart_button', [$this, 'ssnfy_after_add_to_cart_button']); // For after_add_to_cart_button
+            add_action('woocommerce_product_meta_start', [$this, 'ssnfy_product_meta_start']); // For woocommerce_product_meta_start (woocommerce_product_meta_start)
         }elseif(get_option( 'ssnfy-checkout-page-check')=='after_single_product_summary'){
             add_action('woocommerce_after_single_product_summary', [$this, 'ssnfy_after_single_product_summary']); // For after_single_product_summary
         }elseif(get_option( 'ssnfy-checkout-page-check')=='before_single_product_summary'){
@@ -232,5 +230,5 @@ class ClassProdQAFFW {
         add_action('wp_head', [$this, 'ssnfy_taxoes_styles'],99);
 	}
 }
-ClassProdQAFFW::instance();
+ClassProdSSNFY::instance();
 
